@@ -28,16 +28,18 @@ const App = () => {
   return (
     <div className="app-container">
       <nav className="navbar">
-        <div className="logo" onClick={() => setCurrentPage("home")}>PropComp</div>
-        <ul className="nav-links">
-          <li onClick={() => setCurrentPage("home")} className={currentPage === "home" ? "active" : ""}>Home</li>
-          <li onClick={() => setCurrentPage("about")} className={currentPage === "about" ? "active" : ""}>About</li>
-          <li onClick={() => setCurrentPage("services")} className={currentPage === "services" ? "active" : ""}>Services</li>
-          <li onClick={() => setCurrentPage("blog")} className={currentPage === "blog" ? "active" : ""}>Blog</li>
-        </ul>
-        <div className="auth-buttons">
-          <button className="login-btn">Login</button>
-          <button className="signup-btn">Signup</button>
+        <div className="navbar-content">
+          <div className="logo" onClick={() => setCurrentPage("home")}>PropComp</div>
+          <ul className="nav-links">
+            <li onClick={() => setCurrentPage("home")} className={currentPage === "home" ? "active" : ""}>Home</li>
+            <li onClick={() => setCurrentPage("about")} className={currentPage === "about" ? "active" : ""}>About</li>
+            <li onClick={() => setCurrentPage("services")} className={currentPage === "services" ? "active" : ""}>Services</li>
+            <li onClick={() => setCurrentPage("blog")} className={currentPage === "blog" ? "active" : ""}>Blog</li>
+          </ul>
+          <div className="auth-buttons">
+            <button className="login-btn">Login</button>
+            <button className="signup-btn">Signup</button>
+          </div>
         </div>
       </nav>
       

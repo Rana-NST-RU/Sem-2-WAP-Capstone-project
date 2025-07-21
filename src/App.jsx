@@ -4,11 +4,12 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import "./App.css";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
-
 
   const renderPage = () => {
     switch (currentPage) {
@@ -20,6 +21,10 @@ const App = () => {
         return <Services onNavigate={setCurrentPage} />;
       case "blog":
         return <Blog onNavigate={setCurrentPage} />;
+      case "login":
+        return <Login onNavigate={setCurrentPage} />;
+      case "signup":
+        return <Signup onNavigate={setCurrentPage} />;
       default:
         return <NotFound onNavigate={setCurrentPage} />;
     }
@@ -37,8 +42,8 @@ const App = () => {
             <li onClick={() => setCurrentPage("blog")} className={currentPage === "blog" ? "active" : ""}>Blog</li>
           </ul>
           <div className="auth-buttons">
-            <button className="login-btn">Login</button>
-            <button className="signup-btn">Signup</button>
+            <button className="login-btn" onClick={() => setCurrentPage("login")}>Login</button>
+            <button className="signup-btn" onClick={() => setCurrentPage("signup")}>Signup</button>
           </div>
         </div>
       </nav>
